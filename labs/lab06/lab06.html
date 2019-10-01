@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title> Practice Forms! </title>
+  <style type="text/css">
+    input:invalid {
+      background-color: red;
+    }
+  </style>
+</head>
+
+<header>
+ <h1>
+  Forms!
+ </h1>
+</header>
+
+<body>
+  <form action ="/form-handler" method="post">
+    <label for="firstname"> First Name:</label>
+    <input type="text" id="firstname" name="user_name">
+
+<br><br>
+
+    <label for="emailaddr">Email: </label>
+    <input type="email" id="emailaddr" name="emailaddr" placeholder="Your Email Here">
+<br><br>
+
+<label for="date">Date: </label>
+<input type="date" id="date" name="date">
+<br><br>
+
+<label for="time">Time: </label>
+<input type="time" id="time" name="time">
+<br><br>
+
+<p> What is your favorite color? </p>
+    <label>Red:
+      <input type="radio" name="radiocolor"id="radiored">
+    </label>
+    <label>Blue:
+      <input type="radio" name="radiocolor"id="radioblue">
+    </label>
+    <label>Green:
+      <input type="radio" name="radiocolor"id="radiogreen">
+    </label>
+
+<br><br>
+<label>Are you having fun? (Check for yes, leave empty for no)
+  <input type="checkbox" id="likeit" name="likeit">
+</label>
+
+<br> <br>
+<p> <i> But really... </i> What's your favorite color? (Multiple Options May Be Selected! Use ctrl & tab)
+<select name ="ColorFave" size="5" multiple>
+  <optgroup label = "normal">
+    <option>Red</option>
+    <option>Blue</option>
+    <option>Yellow</option>
+    <option>Green</option>
+  </optgroup> </select> </p>
+
+  <br> <br>
+  <p>  What's your least favorite color?
+  <select name ="LeastFave" size ="1">
+    <optgroup label = "normal">
+      <option>Red</option>
+      <option>Blue</option>
+      <option>Yellow</option>
+      <option>Green</option>
+    </optgroup>
+
+  <optgroup label="fancy">
+    <option>Magenta</option>
+    <option>Crimson</option>
+    <option>Mauve</option>
+    <option>Lime</option>
+  </optgroup>
+</select> </p>
+
+
+<br><br>
+<p> Why do you like this website so much?</p>
+  <textarea name="I_Love_This_Site" rows="4" cols="10" wrap> I know you love it...</textarea>
+
+<br><br>
+<button type="submit">Send your form!</button>
+
+<br><br>
+<button type="reset">Reset your form!</button>
+
+  </form>
+
+</body>
+
+
+</html>
