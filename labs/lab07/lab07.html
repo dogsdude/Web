@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title> Practice Embeds! </title>
+  <style type="text/css">
+    input:invalid {
+      background-color: red;
+    }
+  </style>
+  <script>
+
+  var testString = "oh hello";
+  var testString1 = "hello there";
+  var testString2 = "penpenpenpenpen"
+
+  var regex = /^hello/;
+  var regex1 = /hello/;
+  var regex3 = /^(?:pen){2-4}$/;
+
+  var regex2 =/^(?!.*there).*$/;
+
+  console.log(regex.test(testString));
+  console.log(regex.test(testString1));
+
+  console.log(regex1.test(testString));
+  console.log(regex1.test(testString1));
+
+  console.log(regex2.test(testString));
+  console.log(regex2.test(testString1));
+
+  console.log(regex3.test(testString2));
+
+  </script>
+</head>
+
+<header>
+  Embed some stuff
+</header>
+
+<video src="sample_video.mp4" width="640" height="480" controls autoplay muted loop>
+  Download here <a href="sample_video.mp4"> MP4 file</a>
+</video>
+<br><br>
+<audio src="liqwyd-morning.mp3" controls preload="auto">
+  Download here <a href="liqwyd-morning.mp3"> MP3 file</a>
+</audio>
+<br><br>
+<canvas width="600" height="400" id="my_first_canvas">
+  Your browser does not support canvas. Sorry.
+</canvas>
+
+
+  <form action ="/form-handler" method="post">
+    <label for="firstname"> First and Last Name:</label>
+    <input type="text" id="firstname" placeholder= "Space between the two" pattern="[a-z]+\s[a-z]+">
+
+  <br><br>
+
+    <label for=""> What day is it? (Must be a day of the week, and end in "day") :</label>
+    <input type="text" id="weekday" placeholder= "Weekday" pattern="(Sun|Mon|Tues|Wednes|Thurs|Fri|Sat)(day)$">
+
+  <br><br>
+
+  </form>
+
+</html>
