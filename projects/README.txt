@@ -7,8 +7,7 @@ Home Page
   		   	   Title
 			[img]Large Image
     	    [p]Description of the series
-	[dl] Breif titles and descriptions of what each of the other links are
-
+	
   [nav] Links to: Music, Art, Titles (all different pages)
 
 		Video of Some OOT Gameplay
@@ -56,4 +55,6 @@ starup when you enter the website. I also plan to have some additional links to 
 websites or things that people may find interesting if they like the Legend of Zelda.
 I will be updating this README file as I progress with the work!
 -Sam 
+
+https://www.pinterest.com/pin/653092383437329218/?lp=true
 
