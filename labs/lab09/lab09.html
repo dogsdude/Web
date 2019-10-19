@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title> Practice Advanced JavaScript! </title>
+
+  <script>
+  function ID (name, number, age, height){
+    title: { greeting : "Hello"};
+
+    this.number = number;
+    this.age = age;
+    this.height = height;
+
+    var country = "United States";
+    var type = [1,2,3,4,5];
+    // var organDonor = { }
+    // organDonor = answer;
+
+    function valid (checkNum){
+      if(age > 20){
+        console.log("Valid ID, 21+")
+      }
+      else{
+        console.log("Invalid ID")
+      }
+    }
+  }
+
+  var samID = new ID ('Sam','87345621','21','5 11');
+  console.log(samID);
+
+  var permit = {
+
+    type : 'CarDriver',
+    minAge : '15',
+
+    displayType : function(){
+      console.log(this.type);
+    }
+  }
+
+  var myself = Object.create(permit);
+  myself.type = 'NotAPermit!';
+  myself.displayType();
+
+function greeting() {
+  alert("HELLO THERE!");
+}
+
+function keypresss() {
+  confirm("You pressed a key?!");
+}
+
+function mousewentup(){
+  confirm("THE MOUSE WENT UP!!!!");
+}
+
+window.onkeydown = keypresss;
+
+window.addEventListener("mouseup", mousewentup);
+</script>
+
+</head>
+</body>
+<h1 onclick="greeting();"> CLICK ME!! </h1>
+<p> Press a button on your keyboard!!! </p>
+<!-- The following code is busted... Tried to add things dynamically and did not work
+<form method="POST">
+     <input type="button" value="Add another text input" onClick="addInput('dynamicInput');">
+</form> -->
+</body>
+
+</html>
