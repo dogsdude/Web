@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title> Practice JavaScript DOM! </title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <script>
+    $(document).ready(function(){
+
+      var myID = document.getElementById("me").innerHTML;
+      console.log(myID);
+      var myBody = document.getElementById("body").innerHTML;
+      console.log(myBody);
+      document.getElementById("me").innerHTML = "<em>This person no longer exists...</em>";
+
+      var headers = document.getElementsByTagName("h1");
+      console.log(headers);
+      for(var i = 0; i < headers.length; i++){
+        if(i==0){
+        headers[i].setAttribute("title", "I ");
+      }
+      else if (i==1){
+        headers[i].setAttribute("title", "AM");
+      }
+      else if (i==2){
+        headers[i].setAttribute("title", "NOW");
+      }
+      else if (i==3){
+        headers[i].setAttribute("title", "CHANGED!!");
+      }
+
+      }
+      console.log(headers);
+
+      var some_div = document.getElementById("someDiv");
+      var some_par = document.getElementById("somePar");
+
+      var newStuff = document.createElement("h2");
+      var textHead = document.createTextNode("This is some text");
+
+      newStuff.appendChild(textHead);
+
+      var swap_div = document.getElementById("swapDiv");
+      var swap_per = document.getElementById("swapper");
+      var swapImg = document.createElement("img");
+
+      swapImg.setAttribute( "src", "path/to/image.jpg");
+      //The image should be broken as it doesn't exist!
+      swap_div.replaceChild(swapImg, swap_per);
+
+
+      var allHeaders = $('h1');
+      allHeaders.attr('class', 'newHead');
+      console.log(allHeaders);
+
+      var allElements = $('*');
+      console.log(allElements.length);
+      allElements.attr('class', 'bestClass');
+      console.log(allElements);
+
+    });
+  </script>
+</head>
+
+<body id="body">
+  <p id = "me">ID: SAM!</p>
+
+  <h1> This is a header who's title will be changed </h1>
+  <h1> So is this one... </h1>
+  <h1> This one is gonna be changed too! </h1>
+  <h1> This is the last one that's getting changed... </h1>
+
+<div id ="someDiv">
+  <p id ="somePar"> Some text or something here </p>
+</div>
+
+<div id = "swapDiv">
+  <div id = "swapper"></div>
+</div>
+
+</body>
+
+</html>
