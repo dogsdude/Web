@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title> Practice Advanced CSS!! </title>
+  <style>
+  a {
+    text-decoration:none;
+  }
+
+  a:link{
+    color:maroon;
+  }
+
+  a:visited{
+    color:black;
+  }
+
+  a:hover{
+    color:maroon;
+    background-color: #ffd9d9;
+  }
+
+  a:active{
+    color:red;
+    background-color: #ffd9d9;
+  }
+
+  input:focus{
+    background-color:yellow;
+  }
+
+  tr:nth-child(2n) {
+    background-color: #ffd9d9;
+  }
+
+  tr td em {color: darkblue};
+
+
+  #para1::first-letter{
+    font-size: 300%;
+    color:orange;
+  }
+  body{
+    background-image: url(rick.jpg);
+
+    /*background-repeat: no-repeat;
+    */
+  }
+  #table {
+    border-width: 2px;
+    border-color: black;
+    border-style: dotted;
+    background-image: linear-gradient(54deg, red, orange);
+
+  }
+  </style>
+
+<body>
+  <a href="https://google.com">Google</a>
+  <br><br>
+
+  <a href="https://www.dsafkljhasdlkjfhsd.google.com"> Don't click me</a>
+  <br><br>
+  <input type="text">
+  <table id="table">
+    <tr>
+      <td><em>Column</em></td>
+      <td>Column</td>
+      <td><em>Column</em></td>
+    </tr>
+    <tr>
+      <td>Column</td>
+      <td>Column</td>
+      <td><em>Column</em></td>
+    </tr><tr>
+      <td>Column</td>
+      <td>Column</td>
+      <td><em>Column</em></td>
+    </tr><tr>
+      <td>Column</td>
+      <td>Column</td>
+      <td><em>Column</em></td>
+    </tr><tr>
+      <td>Column</td>
+      <td><em>Column</em></td>
+      <td>Column</td>
+    </tr><tr>
+      <td><em>Column</em></td>
+      <td>Column</td>
+      <td>Column</td>
+    </tr>
+
+    <p id = "para1">
+      I am a fancy boi</p>
+
+
+
+</body>
+
+</html>
