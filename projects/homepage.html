@@ -3,6 +3,9 @@
 <head>
   <meta charset="utf-8">
   <title> TLOZ Homepage </title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="driver.js"></script>
+
 </head>
 
 <body>
@@ -14,26 +17,36 @@
       <a href = "art.html"> Art </a>
       <br>
       <a href = "games.html"> Games </a>
+      <br>
+      <p> Welcome to my website! If you click around on images or <strong> weird </strong> text that you find as you mouse over things
+        you should be able to find treasure.
+        The total amount of treasure you find (called Rupees in The Legend of Zelda) will be stored in the number below. Happy hunting!</p>
+      <p id = "Info"></p>
     </nav>
   </header>
 
 <hr>
 
-  <h1> Once upon a time... </h1>
+  <div id = "SwapRupee"><h1 id= "Once"> Once upon a time... </h1></div>
     <p> there was a boy named Link. He lived by himself, with friends, or family in a small village. Life was normal until Link was selected to continue the long
-      time honored tradition of wearing the "Heroe's Clothes" for the annual festival celebrating a great hero that vanquished darkness many years ago. Again and again,
+      time honored tradition of wearing the <em id="Clothes">"Hero's Clothes"</em> for the annual festival celebrating a great hero that vanquished darkness many years ago. Again and again,
       this celebration is held and each time a new darkness arises which Link must then set out from his tiny village to destroy, all while trying to save a princess. A few big monsters,
-      some triforces, treasures, a couple instruments, and melodies later the darkness is put to sleep... only to awaken once more 100 years later and to be fought back by the same namesake...
+      some triforces, <em id="Treasures">treasures</em>, a couple instruments, and melodies later the darkness is put to sleep... only to awaken once more 100 years later and to be fought back by the same namesake...
       <br>
-      <h2> <b> This is... </b> <br> <strong> THE LEGEND OF <s> LINK </s> ZELDA! </strong> </h2>
+      <h2> <b> This is... </b> <br> <strong> THE LEGEND OF <s id="Strike"> LINK </s> ZELDA! </strong> </h2>
     </p>
 
 
     <dl>
+      <img src="Images/music.jpg" alt = "Music" title = "Music" width = "100" height = "50">
       <dt>Music</dt>
         <dd>Click on <a href = "music.html">music</a> to learn more about the wonderful soundtrack that comes with The Legend of Zelda</dd>
+
+      <img src="Images/art.jpg" alt = "Art" title = "Art" width = "100" height = "50">
       <dt>Art</dt>
         <dd>Click on <a href = "art.html">art</a> to see how the artwork has changed for The Legend of Zelda as time has moved forward</dd>
+
+      <img id = "Games" src="Images/games.jpg" alt = "Games" title = "Games" width = "100" height = "50">
       <dt>Games</dt>
         <dd>Click on <a href = "games.html">games</a> to learn a little more about the history of each game in the series</dd>
     </dl>
