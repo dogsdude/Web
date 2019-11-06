@@ -45,6 +45,15 @@
     color:red;
   }
 
+p{
+  background: #f2f5d5;
+  width: 500px;
+  height: 150px;
+  padding: 20px;
+  border: 5px solid gray;
+  margin: 20px;
+  box-sizing:border-box;
+}
 img[title="forever"]{
   border: 4px solid;
   border-color: white;
@@ -76,8 +85,8 @@ img[title~="talk"]{
 
   #Astley{
     box-sizing: border-box;
-    width: 20px;
-    height: 200%;
+    width: 200px;
+
     border: solid blue 6px;
     padding: 8px;
 
