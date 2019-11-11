@@ -15,6 +15,10 @@ function mouseAdd(){
 
   userInfo.innerHTML = "Rupees Collected: " + trackedUser.value;
   console.log(trackedUser.value);
+
+  if(trackedUser.value == 5){
+    alert ("You found all the treasure!");
+  }
 }
 
 //There's probably an easier way to write this code then to make a bunch of different functions to handle
@@ -26,6 +30,7 @@ function swapGreen(){
   rupeeGif.setAttribute("src", "Images/green_small.gif");
 
   rupeeSwap.replaceChild(rupeeGif, onceUpon);
+  mouseAdd();
 }
 
 function swapRed(){
@@ -34,23 +39,53 @@ function swapRed(){
   rupeeGif.setAttribute("src", "Images/red_small.gif");
 
   rupeeSwapP.replaceChild(rupeeGif, hero);
+  mouseAdd();
 }
 
-function beforeRGBspin(){
-  var rupeeSwapP = document.getElementById("SwapPara");
-  var rupeeGif = document.createElement("img");
-  rupeeGif.setAttribute("src", "Images/rgbSpin_small.gif");
+//Closure by Ted Hopp on Stack Overflow, makes it so function only runs a maximum of once
+// I knew the idea of what I wanted to do (set a boolean that would turn from false to true on execution)
+// but didn't know the exact implementation. https://stackoverflow.com/questions/12713564/function-in-javascript-that-can-be-called-only-once
+var something = (function() {
+    var executed = false;
+    return function() {
+        if (!executed) {
+            executed = true;
+            // do something
+        }
+    };
+})();
 
-  rupeeSwapP.insertBefore(rupeeGif, treasure);
-}
+var RGBspin = (function beforeRGBspin(){
+  var beforeStop = false;
+  return function beforeRGBspin(){
+    if(!beforeStop){
+      beforeStop = true;
 
-function appendTreasure(){
+      var rupeeSwapP = document.getElementById("SwapPara");
+      var rupeeGif = document.createElement("img");
+      rupeeGif.setAttribute("src", "Images/rgbSpin_small.gif");
+
+      rupeeSwapP.insertBefore(rupeeGif, treasure);
+      mouseAdd();
+    }
+  }
+})();
+
+var treasureShower = ( function appendTreasure(){
+  var appendStop = false;
+  return function appendTreasure(){
+  if(!appendStop){
+  appendStop = true;
+
   var legend = document.getElementById("Legend");
   var showerGif = document.createElement("img");
   showerGif.setAttribute("src", "Images/shower.gif");
 
   legend.appendChild(showerGif, chest);
+  mouseAdd();
 }
+}
+})();
 
 function swapChest(){
   var foot = document.getElementById("Footer");
@@ -58,26 +93,23 @@ function swapChest(){
   openGif.setAttribute("src", "Images/kick.gif");
 
   foot.replaceChild(openGif, open);
+  mouseAdd();
 }
 
  var onceUpon = document.getElementById("Once");
-onceUpon.addEventListener("mouseover", mouseAdd);
 onceUpon.addEventListener("mouseover", swapGreen);
 
 var hero = document.getElementById("Clothes");
-hero.addEventListener("mouseover", mouseAdd);
 hero.addEventListener("mouseover", swapRed);
 
 var treasure = document.getElementById("Treasures");
-treasure.addEventListener("mouseover", mouseAdd);
-treasure.addEventListener("mouseover", beforeRGBspin);
+treasure.addEventListener("mouseover", RGBspin);
+
 
 var chest = document.getElementById("Strike");
-chest.addEventListener("mouseover", mouseAdd);
-chest.addEventListener("mouseover", appendTreasure);
+chest.addEventListener("mouseover", treasureShower);
 
 var open = document.getElementById("Open");
-open.addEventListener("mouseover", mouseAdd);
 open.addEventListener("mouseover", swapChest);
 
 
