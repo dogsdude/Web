@@ -1,177 +1,187 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <title> TLOZ Music </title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-</head>
+  <head>
+    <meta charset="utf-8">
+    <title> TLOZ Music </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- <script src="driver.js"></script> -->
 
-<style>
+    <style>
+    @font-face{
+      font-family: "Ganon";
+      src: url("ReturnofGanon.ttf");
+    }
 
-ul{
-  list-style-image: url(Images/triforce.png);
-}
+    @font-face{
+      font-family:"Hylia";
+      src: url("Ravenna");
+    }
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="driver.js"></script>
+    @font-face{
+      font-family:"Hylia";
+      src: url("hylia.ttf")
+    }
 
-<style>
-@font-face{
-  font-family: "Ganon";
-  src: url("ReturnofGanon.ttf");
-}
+    h1, h2{
+      font-family: "Hylia";
+      font-size: 4em;
 
-@font-face{
-  font-family:"Hylia";
-  src: url("Ravenna");
-}
+      text-align: center;
+      background-color: #52ae41;
 
-@font-face{
-  font-family:"Hylia";
-  src: url("hylia.ttf")
-}
+      border: groove .1em #c2d849;
 
-h1, h2{
-  font-family: "Hylia";
-  font-size: 4em;
+      border-radius: 4em;
 
-  text-align: center;
-  background-color: #52ae41;
+    }
 
-  border: groove .1em #c2d849;
+    dt{
+      font-family: "Hylia";
+      font-size: 1em;
+    }
 
-  border-radius: 4em;
+    p, dl{
+      font-family: "Ganon";
+      font-size: 25px;
+      text-align: center;
+      background-color: #52ae41;
+      color:#fae906;
 
-}
+      margin:auto;
+      width: 50%;
 
-dt{
-  font-family: "Hylia";
-  font-size: 1em;
-}
+      padding: 2%;
 
-p, dl{
-  font-family: "Ganon";
-  font-size: 25px;
-  text-align: center;
-  background-color: #52ae41;
-  color:#fae906;
+      border: ridge .5em #c2d849;
 
-  margin:auto;
-  width: 50%;
+      border-radius: 1in;
 
-  padding: 2%;
+    }
 
-  border: ridge .5em #c2d849;
+    h3{
+      font-family: "Ganon";
+      font-size:13px;
+      text-align:center;
+      background-color: #52ae41;
+      color:#fae906;
+      margin:auto;
+      width: 75%;
+      padding: 2%;
 
-  border-radius: 1in;
+      border: ridge .5em #c2d849;
 
-}
+      border-radius: .1in;
+    }
 
-img{
-  border: solid .3em black;
+    img{
+      border: solid .3em #c2d849;
+    }
 
-}
+    audio{
 
-body{
-  background-image: url("Images/botw_poster.jpg");
-  background-repeat: no-repeat;
-  text-align: center;
-}
+      padding: 10px;
+    }
 
-/* ul {
-position: fixed;
-list-style-type: none;
-margin: 1em;
-padding: 0;
-overflow: hidden;
-background-color: #2e7122;
-border-radius: .5em;
-border: dashed .4em black;
-} */
+    body{
+      background-image: url("Images/concert.jpg");
+      /* background-repeat: repeat; */
+      text-align: center;
+      background-size: cover;
+    }
 
-#Footer{
-font-size: 20px;
-}
+    #Footer{
+      font-size: 20px;
+    }
 
-li {
-float: left;
-}
+    ul {
+    position: fixed;
+    list-style-type: none;
+    margin: 1em;
+    padding: 0;
+    overflow: hidden;
+    background-color: #2e7122;
+    border-radius: .5em;
+    border: dashed .4em black;
+  }
 
-li a {
-font-family: "Ganon";
-font-size: 20px;
-display: block;
-color: white;
-text-align: center;
-padding: 20px 10px;
-text-decoration: none;
-}
 
-li a:hover {
-background-color: #111;
-}
+  li {
+    float: left;
+  }
 
-</style>
+  li a {
+    font-family: "Ganon";
+    font-size: 20px;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    text-decoration: none;
+  }
+
+  li a:hover {
+    background-color: #111;
+  }
+    </style>
+
+  </head>
 
 <body>
   <header>
-    <i>Music</i>
     <nav>
-      <a href = "homepage.html"> Homepage </a>
-      <br>
-      <a href = "art.html"> Art </a>
-      <br>
-      <a href = "games.html"> Games </a>
+      <ul>
+      <li><a href = "homepage.html"> Homepage </a></li>
+
+      <li><a href = "art.html"> Art </a></li>
+
+      <li><a href = "games.html"> Games </a></li>
+     </ul>
     </nav>
   </header>
 
-<hr>
-  <img src = "Images/OpeningSymbol.jpg" alt = "LOTZ Music" title = "Anniversay" width="400" height = "400">
+  <img src = "Images/OpeningSymbol.jpg" alt = "LOTZ Music" title = "Anniversay" width="510" height = "510">
   <h1> The music in Legend of Zelda spans generations... </h1>
     <p> mostly due to the efforts of the wonderful composer Koji Kondo. Music not only is a key factor in the games, taking us
       across the sea, through dungeons, setting the tone and mood throughout, it also factors heavily into many of
       the series gameplay elements as well. In "Ocarina of Time" Link learns a variety of melodies on his fabled ocarina
       given to him by princess Zelda hereself. These melodies drastically effect gameplay, allowing Link to travel to the past, cause rainstorms,
       and unlock secret treasures and dialogue. Nearly every game in the series has a fabled instrument like the Ocarina tying the music of The Legend of Zelda
-      not only to our ears, but to how we play with and experience the game. </p>
-      <p> Click <a href="#musicSamples">here</a> to skip the images and go to samples of the music! </p>
-
-      <img src = "Images/Ocarina.png" alt = "Ocarina" title = "Anniversay" width="400" height = "400"> <img src = "Images/TracksFlute.png" alt = "Flute" title = "Anniversay" width="250" height = "300">
+      not only to our ears, but to how we play with and experience the game.
+      Click <a href="#musicSamples">here</a> to skip the images and go to samples of the music! </p>
+      <br>
+      <img src = "Images/Ocarina.png" alt = "Ocarina" title = "Anniversay" width="400" height = "400"> <img src = "Images/SpiritPipes.jpg" alt = "Flute" title = "Anniversay" width="310" height = "300">
       <img src = "Images/WakerBaton.jpg" alt = "Baton" title = "Anniversay" width="400" height = "400"> <img src = "Images/SkywardHarp.jpg" alt = "Harp" title = "Anniversay" width="800" height = "400">
 
       <br>
-      <h3 id="musicSamples"> </h3>
+      <h4 id="musicSamples"> </h4>
       <h2> A taste of the soundtrack from The Legend of Zelda </h2>
-        <ul>
+        <ol>
           <li>
-            <p> Main Theme - Every Entry </p>
-            <audio src= "Music/TheOriginalThemeSong.mp3" controls preload="auto"> </audio>
+          <h3> Main Theme</h3>
+            <audio src= "Music/TheOriginalThemeSong.mp3" controls preload="auto"> Main Theme - Every Entry  </audio>
           </li>
           <li>
-            <p> Fairy Fountain - Every Entry</p>
-            <audio src= "Music/FairyFountain.mp3" controls preload="auto"> </audio>
-          </li>
-          <li>
-            <p> Ballad of the Goddess - Skyward Sword </p>
+            <h3> Ballad of the Goddess-Skyward Sword </h3>
             <audio src= "Music/Ballad.mp3" controls preload="auto"> </audio>
           </li>
           <li>
-            <p> The Lost Woods - Ocarina of Time </p>
+            <h3> The Lost Woods-Ocarina of Time </h3>
             <audio src= "Music/LostWoods.mp3" controls preload="auto"> </audio>
           </li>
           <li>
-            <p> Hyrule Field - Twilight Princess </p>
+            <h3> Hyrule Field-Twilight Princess </h3>
             <audio src= "Music/HyruleField.mp3" controls preload="auto">  </audio>
           </li>
-        </ul>
+        </ol>
 
 <br>
-
-<footer>
+<br><br>
+<br> <br> <br><br><br><br><br><br>
+<footer id = "Footer">
   <p> &copy; 2019 Sam Lindsey - Web1 - Prof. Dan Pittman - Static Web Project - Music </p>
 </footer>
 
-<br><br><br><br>
 
 
 </body>
