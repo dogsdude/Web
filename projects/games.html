@@ -3,49 +3,235 @@
 <head>
   <meta charset="utf-8">
   <title> TLOZ Games </title>
-  <script> src="driver.js"</script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<style>
-table, th, td {
-  border: 1px solid black;
+  <script src="driver.js"></script>
+
+  <style>
+
+@font-face{
+  font-family: "Ganon";
+  src: url("ReturnofGanon.ttf");
+}
+
+@font-face{
+  font-family:"Hylia";
+  src: url("Ravenna");
+}
+
+@font-face{
+  font-family:"Hylia";
+  src: url("hylia.ttf")
+}
+
+h1, h2{
+  font-family: "Hylia";
+  font-size: 4em;
+
+  text-align: center;
+  background-color: #52ae41;
+
+  border: groove .1em #c2d849;
+
+  border-radius: 4em;
+
+}
+
+h3{
+  font-family: "Ganon";
+  font-size:13px;
+  text-align:center;
+  background-color: #52ae41;
+  color:#fae906;
+  margin:auto;
+  width: 75%;
+  padding: 2%;
+
+  border: ridge .5em #c2d849;
+
+  border-radius: .1in;
+}
+
+h4{
+  font-family: "Ganon";
+  color:#fae906;
+}
+
+h5{
+    font-family: "Hylia";
+    color: #2e7122;
+}
+
+dt{
+  font-family: "Hylia";
+  font-size: 1em;
+}
+
+table, td {
+  font-family: "Ganon";
+  border: solid black;
+  background-color: #52ae41;
+  color:#fae906;
+  margin:auto;
+}
+
+th{
+  font-family: "Hylia";
+  border: 2px solid black;
+  height: 60px;
+  background-color: #2e7122;
+  color:#fae906;
+}
+
+p, dl{
+  font-family: "Ganon";
+  font-size: 25px;
+  text-align: center;
+  background-color: #52ae41;
+  color:#fae906;
+
+  margin:auto;
+  width: 50%;
+
+  padding: 2%;
+
+  border: ridge .5em #c2d849;
+
+  border-radius: 1in;
+
+}
+
+img{
+  border: solid .3em #c2d849;
+}
+
+audio{
+  padding: 10px;
+}
+
+body{
+  background-image: url("Images/paint.jpg");
+  /* background-repeat: repeat; */
+  text-align: center;
+  background-size: cover;
+}
+
+#Footer{
+  font-size: 20px;
+}
+
+ol {
+  /* background-color: #52ae41; */
+  font-family: "Ganon";
+  font-size: 25px;
+  text-align: center;
+  background-color: #52ae41;
+  color:#fae906;
+
+  margin:auto;
+  width: 50%;
+
+   padding: 5%;
+
+  border: ridge .5em #c2d849;
+
+  border-radius: 1in;
+}
+
+ol li{
+  float:none;
+}
+
+ul {
+position: fixed;
+list-style-type: none;
+margin: 1em;
+padding: 0;
+overflow: hidden;
+background-color: #2e7122;
+border-radius: .5em;
+border: dashed .4em black;
+}
+
+
+li {
+float: left;
+}
+
+li a {
+font-family: "Ganon";
+font-size: 20px;
+display: block;
+color: white;
+text-align: center;
+padding: 20px 10px;
+text-decoration: none;
+}
+
+li a:hover {
+background-color: #111;
+}
+
+form{
+  background-color: #2e7122;
+  border: solid .2em black;
+  border-radius: 1em;
+}
+
+fieldset > label{
+  font-family: "Ganon";
+  font-size: 13px;
+  color:#fae906;
+}
+
+input, textarea{
+  background-color:#fae906;
+}
+
+button{
+  font-family:"Ganon";
 }
 </style>
-</head>
 
+</head>
 <body>
   <header>
-    <i>Games</i>
     <nav>
-      <a href = "homepage.html"> Homepage </a>
-      <br>
-      <a href = "art.html"> Art </a>
-      <br>
-      <a href = "Music.html"> Music </a>
+     <ul>
+      <li><a href = "music.html"> Music </a></li>
+      <li><a href = "homepage.html"> Homepage </a></li>
+      <li><a href = "games.html"> Games </a></li>
+      <h4 id = "Info"></h4>
+     </ul>
     </nav>
   </header>
 
-<br>
+<br><br><br><br> <br><br>
 
   <h1> The Gameplay.... </h1>
-    <p> in the Legend of Zelda usually revolves around adventuring the land of Hyrule. You are sometimes accompanied by your horse, Epona, other times you ride across
+    <p id= "SwapPara"> in the Legend of Zelda usually revolves around adventuring the land of Hyrule. You are sometimes accompanied by your horse, <em id = "Treasures">Epona</em>, other times you ride across
       the land on a bird, boat or train, and still others, you transform into a wolf or warp from point to point. Ultimately, you will travel across the land helping others
-      and getting past some sort of trouble or puzzle they have for you before entering into a dungeon. Dungeons usually are combat focused areas that introduce you to a new
+      and getting past some sort of trouble or <strong id="Clothes">puzzle</strong> they have for you before entering into a dungeon. Dungeons usually are combat focused areas that introduce you to a new
       item that helps you progress through the game and unlocks areas that were previously inaccessible. These typically end in a large boss fight that tests your ability to use the item that the
       dungeon has given you. Then you exit the dungeon, rinse and repeat! Many of the games follow a linear fashion where you need to progress through the dungeons in a certain order, but more
       and more they are becoming non-linear allowing you to explore whereever you see fit (even if that means fighting the final boss first!) Gameplay is by far the reason people keep coming
-      back to the games over and over. It's just that good.
+      back to the games over and over. It's just that good.</p>
 
       <br>
-      <h2> My top 5 games from the series (in order): </h2>
+      <h2> My top 5 games: </h2>
         <ol>
-          <li> Wind Waker </li>
+          <li id = "Footer"> <em id = "Open">Wind Waker</em> </li>
+          <br>
           <li> Breath of the Wild </li>
+          <br>
           <li> Twilight Princess </li>
+          <br>
           <li> A Link Between Worlds </li>
+          <br>
           <li> Ocarina of Time </li>
         </ol>
+    <br>
 
-<h2> Which games have came out for each Nintendo home console? </h2>
+<h2> Games for each Nintendo home console? </h2>
 <table>
  <thead>
  <tr>
@@ -103,21 +289,22 @@ table, th, td {
     </tr>
     <tr>
       <td></td>
-      <td>Breath of the Wild</td>
+      <td id = "SwapRupee"> <em id = "Once">Breath</em> of the Wild</td>
       <td></td>
   </tbody>
   </table>
 
-
+<br>
  <img src = "https://i.pinimg.com/originals/c6/10/44/c610440f9e29cdff6bb870df46be1e31.jpg" alt = "Logos of Legend of Zelda" title = "All logos" width="800" height = "800">
-      <p>If you've ever played any of the Legend of Zelda games I'd love to ask you a few questions. Please respond below to the best of your ability!
+
       <form action ="/form-handler" method="post">
         <fieldset>
 
           <label for="firstname"> First Name:</label>
           <input type="text" id="firstname" name="user_name">
-
-          <p> What is your favorite mainline Zelda game? </p>
+          <h4>If you've ever played any of the Legend of Zelda games I'd love to ask you a few questions. Please respond below to the best of your ability!</h4>
+          <br>
+          <h4> What is your favorite mainline Zelda game? </h4>
               <label>The Legend of Zelda
                 <input type="radio" name="radiocolor"id="radioTLOZ">
               </label>
@@ -164,7 +351,7 @@ table, th, td {
                 <input type="radio" name="radiocolor"id="radioTLOZWild">
               </label>
 
-              <p> Why is it your favorite?</p>
+              <h4 id = "Legend"> Why is it your <em id = "Strike">favorite?</em></h4>
                 <textarea name="My_Fav" rows="4" cols="100" wrap> In as many or few words as you like...</textarea>
 
 
@@ -180,7 +367,7 @@ table, th, td {
 
 
 
-<footer>
+<footer id = "Footer">
   <p> &copy; 2019 Sam Lindsey - Web1 - Prof. Dan Pittman - Static Web Project - Games </p>
 </<footer>
 

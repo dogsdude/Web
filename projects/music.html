@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title> TLOZ Music </title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- <script src="driver.js"></script> -->
+    <script src="driver.js"></script>
 
     <style>
     @font-face{
@@ -25,7 +25,7 @@
 
     h1, h2{
       font-family: "Hylia";
-      font-size: 4em;
+      font-size: 3em;
 
       text-align: center;
       background-color: #52ae41;
@@ -34,6 +34,15 @@
 
       border-radius: 4em;
 
+    }
+
+    h3{
+      font-family: "Hylia";
+      color: #2e7122;
+    }
+    h4{
+      font-family: "Ganon";
+      color:#fae906;
     }
 
     dt{
@@ -130,23 +139,22 @@
 <body>
   <header>
     <nav>
-      <ul>
+     <ul>
+      <li><a href = "music.html"> Music </a></li>
       <li><a href = "homepage.html"> Homepage </a></li>
-
-      <li><a href = "art.html"> Art </a></li>
-
       <li><a href = "games.html"> Games </a></li>
+      <h4 id = "Info"></h4>
      </ul>
     </nav>
   </header>
 
   <img src = "Images/OpeningSymbol.jpg" alt = "LOTZ Music" title = "Anniversay" width="510" height = "510">
   <h1> The music in Legend of Zelda spans generations... </h1>
-    <p> mostly due to the efforts of the wonderful composer Koji Kondo. Music not only is a key factor in the games, taking us
+    <p id = "SwapPara"> mostly due to the efforts of the wonderful composer <em id = "Clothes">Koji Kondo.</em> Music not only is a key factor in the games, taking us
       across the sea, through dungeons, setting the tone and mood throughout, it also factors heavily into many of
       the series gameplay elements as well. In "Ocarina of Time" Link learns a variety of melodies on his fabled ocarina
       given to him by princess Zelda hereself. These melodies drastically effect gameplay, allowing Link to travel to the past, cause rainstorms,
-      and unlock secret treasures and dialogue. Nearly every game in the series has a fabled instrument like the Ocarina tying the music of The Legend of Zelda
+      and unlock secret treasures and dialogue. Nearly every game in the series has a fabled instrument like the <em id = "Treasures">Ocarina</em> tying the music of The Legend of Zelda
       not only to our ears, but to how we play with and experience the game.
       Click <a href="#musicSamples">here</a> to skip the images and go to samples of the music! </p>
       <br>
@@ -155,10 +163,10 @@
 
       <br>
       <h4 id="musicSamples"> </h4>
-      <h2> A taste of the soundtrack from The Legend of Zelda </h2>
+      <h2 id = Legend> A taste of the <strong id = "Strike">soundtrack</strong> from The Legend of Zelda </h2>
         <ol>
           <li>
-          <h3> Main Theme</h3>
+          <h3 id="SwapRupee"> <em id ="Once">Main Theme</em></h3>
             <audio src= "Music/TheOriginalThemeSong.mp3" controls preload="auto"> Main Theme - Every Entry  </audio>
           </li>
           <li>
@@ -178,8 +186,8 @@
 <br>
 <br><br>
 <br> <br> <br><br><br><br><br><br>
-<footer id = "Footer">
-  <p> &copy; 2019 Sam Lindsey - Web1 - Prof. Dan Pittman - Static Web Project - Music </p>
+<footer>
+  <p id = "Footer"> &copy; 2019 Sam Lindsey - Web1 - Prof. <em id="Open">Dan</em> Pittman - Static Web Project - Music </p>
 </footer>
 
 
