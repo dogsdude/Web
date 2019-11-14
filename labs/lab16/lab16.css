@@ -1,8 +1,8 @@
-#container {
+/* #container {
   display: flex;
   /* flex-direction: row; */
   border: 5px solid;
-  /* flex-wrap:wrap; */
+  /* flex-wrap:wrap;
   flex-flow: row wrap;
   justify-content: space-around;
   height:350px;
@@ -61,4 +61,30 @@
 .box10{
   background-color: magenta;
   order:0;
+} */
+
+#layout{
+  display: grid;
+  grid-template-rows: 100px 400px 100px;
+  grid-template-columns: 200px 500px 200px;
+}
+
+#one{
+  background-color: red;
+}
+
+#two{
+  background-color: lightgreen;
+}
+
+#three{
+  background-color: orange;
+}
+
+#four{
+  background-color: lightblue;
+}
+
+#five{
+  background-color: yellow;
 }

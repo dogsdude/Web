@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title> Practice Advanced CSS!! </title>
+  <link rel="styleSheet" href="lab17.css">
+  <style>
+    .smooth {
+      display: block;
+      text-decoration: none;
+      text-align: center;
+      padding: 1em 2em;
+      width: 10em;
+      border-radius:1.5em;
+      color:#fff;
+      background-color: mediumblue;
+      /* transition-property: background-color;
+      transition-duration: 0.3s;
+      transition-timing-function: ease-in-out;
+      transition-delay: 0.2s;
+
+      transition:background-color 0.3s ease-in-out 0.2s; */
+
+      /* transition-property: background-color, color, letter-spacing;
+      transition-duration:0.3s 2s 0.3s;
+      transition-timing-function: ease-out, ease-in, ease-out; */
+
+      transition: all 0.2s ease-in-out;
+
+    }
+    .smooth:hover, .smooth:focus{
+      background-color: red;
+    }
+
+    #pup{
+      width:250px;
+      transition: transform 0.3s linear;
+    }
+
+    #pup:hover, #pup:focus{
+      transform:rotate(-3deg) scale(1.5);
+    }
+
+    
+  </style>
+
+</head>
+<body>
+  <a href = "https://www.google.com" class="smooth"> Awesomesauce</a>
+  <img id="pup" src="pup.jpg">
+</body>
+
+</html>

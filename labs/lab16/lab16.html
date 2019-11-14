@@ -4,8 +4,59 @@
   <meta charset="utf-8">
   <title> Practice Advanced CSS!! </title>
   <link rel="styleSheet" href="lab16.css">
+  <style>
+  #layout{
+    display: grid;
+    /* grid-template-rows: [header-start] 100px [head-end content-start] 400px [footer-start] 100px;
+    grid-template-columns:[ads] 200px [main] 1fr [links] 200px;
+    grid-template-areas:"header header header"
+                        "ads     ads    ads"
+                        "footer  footer  footer"; */
+  grid:
+  [header-start] "header header header" 100px
+  [content-start] "ads main links" 400px
+  [footer-start] "footer footer footer" 100px
+  / [ads] 200px [main] 1fr [links] 200px;
+  grid-row-gap: 1em;
+  grid-column-gap: 1em;
+    /* grid-template-columns:repeat(5,20px,1fr); */
+  }
+
+  #one{
+    background-color: red;
+    /* grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start:1;
+    grid-column-end: 4;
+
+    grid-row 1 /  2;
+    grid-column: 1/ span 3;*/
+
+    grid-area: header;
+  }
+
+  #two{
+    background-color: lightgreen;
+    grid-area: ads;
+  }
+
+  #three{
+    background-color: orange;
+    grid-area: main;
+  }
+
+  #four{
+    background-color: lightblue;
+    grid-area:links;
+  }
+
+  #five{
+    background-color: yellow;
+    grid-area:footer;
+  }
+  </style>
 <body>
-  <div id="container">
+  <!-- <div id="container">
     <div class="box box1">1</div>
     <div class="box box2">2</div>
     <div class="box box3">3</div>
@@ -16,10 +67,16 @@
     <div class="box box8">8</div>
     <div class="box box9">9</div>
     <div class="box box10">10</div>
-  </div>
+  </div> -->
 
+<div id ="layout">
+  <div id = "one"> One</div>
+  <div id = "two"> Two</div>
+  <div id = "three"> Three</div>
+  <div id = "four"> Four</div>
+  <div id = "five"> Five</div>
+</div>
 </body>
-
 </head>
 
 </html>
