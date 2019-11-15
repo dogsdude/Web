@@ -1,8 +1,8 @@
-/* #container {
+ #container {
   display: flex;
-  /* flex-direction: row; */
+  flex-direction: row;
   border: 5px solid;
-  /* flex-wrap:wrap;
+  flex-wrap:wrap;
   flex-flow: row wrap;
   justify-content: space-around;
   height:350px;
@@ -61,30 +61,64 @@
 .box10{
   background-color: magenta;
   order:0;
-} */
+}
 
 #layout{
   display: grid;
-  grid-template-rows: 100px 400px 100px;
-  grid-template-columns: 200px 500px 200px;
+  /* grid-template-rows: [header-start] 100px [head-end content-start] 400px [footer-start] 100px;
+  grid-template-columns:[ads] 200px [main] 1fr [links] 200px;
+  grid-template-areas:"header header header"
+                      "ads     ads    ads"
+                      "footer  footer  footer"; */
+grid:
+[header-start] "header header header" 100px
+[content-start] "ads main links" 400px
+[footer-start] "footer footer2 footer3" 100px
+/ [ads] 200px [main] 1fr [links] 200px;
+grid-row-gap: 1em;
+grid-column-gap: 1em;
+  /* grid-template-columns:repeat(5,20px,1fr); */
 }
 
 #one{
   background-color: red;
+  /* grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start:1;
+  grid-column-end: 4;
+
+  grid-row 1 /  2;
+  grid-column: 1/ span 3;*/
+
+  grid-area: header;
 }
 
 #two{
   background-color: lightgreen;
+  grid-area: ads;
 }
 
 #three{
   background-color: orange;
+  grid-area: main;
 }
 
 #four{
   background-color: lightblue;
+  grid-area:links;
 }
 
 #five{
   background-color: yellow;
+  grid-area:footer;
+}
+
+#six{
+  background-color: brown;
+  grid-area: footer2;
+}
+
+#seven{
+  background-color: purple;
+  grid-area: footer3;
 }
