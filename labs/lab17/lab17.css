@@ -1,0 +1,73 @@
+.smooth {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  padding: 1em 2em;
+  width: 10em;
+  border-radius:1.5em;
+  color:#fff;
+  background-color: mediumblue;
+  /* transition-property: background-color;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0.2s;
+
+  transition:background-color 0.3s ease-in-out 0.2s; */
+
+  /* transition-property: background-color, color, letter-spacing;
+  transition-duration:0.3s 2s 0.3s;
+  transition-timing-function: ease-out, ease-in, ease-out; */
+
+  transition: all 0.5s ease-in-out 0.5s;
+
+}
+.smooth:hover, .smooth:focus{
+  background-color: red;
+}
+
+#pup{
+  width:250px;
+  margin:100px 100px 100px 100px;
+  transition: transform 0.3s linear;
+}
+
+#pup:hover, #pup:focus{
+  transform:rotate(-3deg) scale(1.5);
+}
+
+ul{
+  perspective: 250px;
+}
+
+li{
+  transform: rotateX(45deg);
+}
+
+@keyframes puppers {
+  0% {background-color: red;}
+  50%{background-color: purple;}
+  100% {background-color: blue;}
+}
+
+#somePups{
+  animation: puppers 2s linear infinite alternate;
+}
+
+@keyframes colors {
+  0% { background-color: red; }
+20% { background-color: orange; }
+40% { background-color: yellow; }
+60% { background-color: green; }
+80% { background-color: blue; }
+100% { background-color: purple; }
+}
+
+#magic {
+  animation: colors 5s linear infinite alternate;
+}
+
+@media screen and (min-width:20em){
+  h1{
+    font-size: 500px;
+  }
+}
